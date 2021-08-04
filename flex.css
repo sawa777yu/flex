@@ -1,5 +1,72 @@
-*{
+* {
   margin: 0;
   padding: 0%;
   box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  /* ここのwidthも不要。何も書かなければautoおよび100%は同義かな */
+  padding: 30px 20px;
+  background-color: rgb(240, 20, 221);
+  display: flex;
+  justify-content: flex-end;
+}
+header > :first-child {
+  margin-right: auto;
+}
+
+header > div {
+  flex-basis: 140px;
+  height: 70px;
+  margin: 0 10px;
+  background-color: pink;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  /* margin: 0 auto;　は不要。真ん中に寄せたい意図があったが
+  margin: 0 auto;　がその役割 */
+}
+
+.left {
+  width: 300px;
+  background-color: mediumaquamarine;
+}
+
+.right-box {
+  max-width: 700px;
+  flex-grow: 1;
+  background-color: green;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* answerには上記があったがなくても同じな気がする */
+}
+
+.right-box > div {
+  flex-basis: 200px;
+  height: 130px;
+  margin: 10px;
+  background-color: yellow;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: blue;
+  width: 100%;
+  padding: 20px;
+}
+
+footer > div {
+  flex-basis: 45%;
+  max-width: 600px;
+  height: 40px;
+  margin: 10px;
+  background-color: aqua;
 }
